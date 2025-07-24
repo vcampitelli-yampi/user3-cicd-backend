@@ -1,0 +1,14 @@
+{
+    "name": "vcampitelli/demo-curso-14",
+    "description": "Aplicação demo do Curso 14",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Vinícius Campitelli",
+            "email": "eu@viniciuscampitelli.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
