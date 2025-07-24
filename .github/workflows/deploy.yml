@@ -24,8 +24,8 @@ jobs:
      - name: Deploy to AWS CodeDeploy
        run: |
         aws deploy create-deployment \
-          --application-name user03-cicd-backend \
-          --deployment-group-name $AWS_CODEDEPLOY_APPLICATION \
-          --github-location repository="$GITHUB_REPO",commitId="$GITHUB_SHA" \
-          --description "$GITHUB_SHA" \
-          --ignore-application-stop-failures
+            --application-name ${{secrets.AWS_CODEDEPLOY_APPLICATION}} \
+            --deployment-group-name ${{secrets.AWS_CODEDEPLOY_DEPLOYMENT_GROUP}} \
+            --description ${GITHUB_SHA} \
+            --github-location repository=${{ github.repository }},commitId=${{ github.sha }} \
+            --ignore-application-stop-failures
